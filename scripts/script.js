@@ -6,7 +6,10 @@ const dom = {
     humidity: document.querySelector('.humidity .js-value'),
     description: document.querySelector('.description'),
     form: document.querySelector('form'),
-    input: document.querySelector('#city')
+    input: document.querySelector('#city'),
+    weatherInfo: document.querySelector('.weather-info'),
+    h1: document.querySelector('h1'),
+    container: document.querySelector('.container')
 }
 
 async function getData(city) {
@@ -37,6 +40,10 @@ async function startApp(e) {
     dom.tempMin.textContent = await formated.tempMin;
     dom.humidity.textContent = await formated.humidity;
     dom.description.textContent = await formated.description;
+    dom.weatherInfo.classList.remove('hidden');
+    dom.h1.classList.add('hidden');
+    dom.form.classList.add('change');
+    dom.container.classList.add('change');
 }
 
 dom.form.addEventListener('submit', startApp);

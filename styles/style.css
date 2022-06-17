@@ -1,0 +1,103 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout */
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: #414361;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+    .container.change {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        min-height: 80vh;
+    }
+
+h1 {
+    margin-top: 10rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.weather-info {
+    padding-top: 3rem;
+}
+
+    
+/* Typography */
+body {
+    font-family: Helvetica, sans-serif;
+    color: #FFA9E7;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+input {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+button {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 900;
+    color: #FFA9E7;
+}
+
+.weather-info {
+    color: white;
+    font-weight: bold;
+    vertical-align: center;;
+}
+
+.current-temp {
+    font-size: 6rem;
+    margin: 0;
+}
+
+.city-name {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.description {
+    text-transform: capitalize;
+}
+
+/* Components */
+input,
+button {
+    min-width: 280px;
+    padding: .65rem;
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    background-color: #2A2D43;
+}
